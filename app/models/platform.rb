@@ -1,3 +1,3 @@
 class Platform < ApplicationRecord
-  validates :name, :launch_year, presence: true
+  validates :name, presence: true
 end
