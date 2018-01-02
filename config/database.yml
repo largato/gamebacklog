@@ -13,7 +13,4 @@ test:
 
 production:
   <<: *default
-  host: <%= ENV['GAMEBACKLOG_DATABASE_HOST'] %>
-  database: <%= ENV['GAMEBACKLOG_DATABASE_NAME'] %>
-  username: <%= ENV['GAMEBACKLOG_DATABASE_USERNAME'] %>
-  password: <%= ENV['GAMEBACKLOG_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
