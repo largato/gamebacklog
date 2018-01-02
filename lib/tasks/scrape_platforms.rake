@@ -10,7 +10,7 @@ namespace :scrape do
     plats = Hash.from_xml(content)
 
     plats['Data']['Platforms']['Platform'].each do |plat|
-      Platform.create(name: plat['name']) if Platform.find_by_name(plat['name']).nil?
+      Platform.create(name: plat['name'], thegamesdb_id: plat['id']) if Platform.find_by_name(plat['name']).nil?
     end
 
     Rails.logger.info("Scrapping of platforms endend")
